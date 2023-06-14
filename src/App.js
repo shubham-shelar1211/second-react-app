@@ -1,15 +1,25 @@
-// is this working in your system ??
-// AUTO SUGGESTION FEATURE ??
-// Auto Formatting. Prettier.
 function App() {
+  let str = `Hello Universe!!!`;
+  let pi = 3.141159;
+  let active = true;
+  let isUserdLoggedIn = true;
+
+  // JSX
   return (
     <>
-      <h1>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dolores
-        dolore quam nulla repellendus. Voluptatibus ullam dolorum asperiores
-        beatae dolor, inventore, ducimus corporis esse aspernatur, perferendis
-        ratione id tempore facere?
-      </h1>
+      <h1>Hello World</h1>
+      <h1>{str}</h1>
+      <h1>PI {pi} !!</h1>
+
+      {/**IF Logged In */}
+      {isUserdLoggedIn && <h1>Welcome CDAC!</h1>}
+
+      {/** Usage of Boolean */}
+      <h1>{active ? "good morning" : "good night"}</h1>
+
+      {/** MOST USEFUL  */}
+      {active && <h1>Good Morning</h1>}
+      {active ? <h1>Good Morning</h1> : <h1>Good Night</h1>}
     </>
   );
 }
